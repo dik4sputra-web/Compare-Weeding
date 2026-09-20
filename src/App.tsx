@@ -1,4 +1,4 @@
-// v9
+// v22
 import { useState, useRef } from 'react'
 
 const PLATFORM_STYLES: Record<string, { label: string; bg: string; color: string; border: string }> = {
@@ -146,40 +146,40 @@ const featureKeys: Record<Category, string[]> = {
 
 const defaultVendors: Vendor[] = [
   // MUA
-  { id: 'mua-1', name: 'Sari Ayu Bridal', category: 'mua', price: 'Rp 3.500.000', priceNum: 3500000, rating: 4.9, reviews: 284, location: 'Jakarta Selatan', experience: '2014', image: 'https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=400&h=300&fit=crop&auto=format', tags: ['Airbrush', 'Hijab Syar\'i', 'Trial Termasuk'], description: 'Spesialis makeup pengantin adat Jawa dan modern dengan teknik airbrush terkini.', links: { instagram: 'https://instagram.com/sariayu_bridal', whatsapp: 'https://wa.me/6281234567890' }, features: { 'Percobaan Makeup': true, 'Airbrush': true, 'Tata Hijab': true, 'Adat Jawa': true, 'Gaya Modern': true, 'Kit Rias Ulang': true } },
-  { id: 'mua-2', name: 'Glam Studio by Rena', category: 'mua', price: 'Rp 2.800.000', priceNum: 2800000, rating: 4.7, reviews: 192, location: 'Bekasi', experience: '2018', image: 'https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=400&h=300&fit=crop&auto=format', tags: ['Tampilan Natural', 'HD Makeup', 'Layanan di Lokasi'], description: 'Makeup pengantin natural dan elegan untuk pengantin modern menggunakan produk internasional premium.', links: { instagram: 'https://instagram.com/glamstudio_rena', tiktok: 'https://tiktok.com/@glamstudio_rena' }, features: { 'Percobaan Makeup': true, 'Airbrush': false, 'Tata Hijab': true, 'Adat Jawa': false, 'Gaya Modern': true, 'Kit Rias Ulang': true } },
-  { id: 'mua-3', name: 'Cantik Bersama Dewi', category: 'mua', price: 'Rp 1.900.000', priceNum: 1900000, rating: 4.5, reviews: 108, location: 'Depok', experience: '2021', image: 'https://images.unsplash.com/photo-1562322140-8baeececf3df?w=400&h=300&fit=crop&auto=format', tags: ['Ramah Anggaran', 'Natural', 'Sundanese Adat'], description: 'Makeup berkualitas dengan harga terjangkau, spesialis riasan pengantin adat Sunda.', links: { whatsapp: 'https://wa.me/6285678901234', facebook: 'https://facebook.com/cantikbersamadewi' }, features: { 'Percobaan Makeup': false, 'Airbrush': false, 'Tata Hijab': true, 'Adat Jawa': false, 'Gaya Modern': true, 'Kit Rias Ulang': false } },
-  { id: 'mua-4', name: 'Ayu Maharani MUA', category: 'mua', price: 'Rp 4.200.000', priceNum: 4200000, rating: 4.8, reviews: 176, location: 'Surabaya', experience: '2013', image: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=400&h=300&fit=crop&auto=format', tags: ['Airbrush', 'Adat Jawa', 'Premium'], description: 'MUA profesional spesialis riasan adat Jawa dan modern dengan sentuhan mewah dan tahan lama.', links: { instagram: 'https://instagram.com/ayu_maharani_mua', whatsapp: 'https://wa.me/6281399887766' }, features: { 'Percobaan Makeup': true, 'Airbrush': true, 'Tata Hijab': false, 'Adat Jawa': true, 'Gaya Modern': true, 'Kit Rias Ulang': true } },
-  { id: 'mua-5', name: 'Glow Studio Nadira', category: 'mua', price: 'Rp 2.200.000', priceNum: 2200000, rating: 4.6, reviews: 143, location: 'Tangerang', experience: '2019', image: 'https://images.unsplash.com/photo-1457972729786-0411a3b2b626?w=400&h=300&fit=crop&auto=format', tags: ['Gaya Modern', 'Tampilan Natural', 'Tata Hijab'], description: 'Riasan pengantin modern dengan teknik contouring terkini, cocok untuk pengantin hijab maupun non-hijab.', links: { instagram: 'https://instagram.com/glow_nadira', tiktok: 'https://tiktok.com/@glow_nadira' }, features: { 'Percobaan Makeup': true, 'Airbrush': false, 'Tata Hijab': true, 'Adat Jawa': false, 'Gaya Modern': true, 'Kit Rias Ulang': true } },
+  { id: 'mua-1', name: 'Sari Ayu Bridal', category: 'mua', price: 'Rp 3.500.000', priceNum: 3500000, rating: 4.9, reviews: 284, location: 'Jakarta Selatan', experience: '2014', image: 'https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=400&h=300&fit=crop&auto=format', tags: ['Airbrush', 'Hijab Syar\'i', 'Trial Termasuk'], description: 'Berpengalaman lebih dari 10 tahun dalam riasan pengantin adat Jawa dan modern. Menggunakan teknik airbrush profesional dengan produk MAC, NARS, dan Charlotte Tilbury yang tahan lama hingga 12 jam. Setiap paket sudah termasuk trial makeup 2 minggu sebelum hari-H, tata hijab syar\'i, dan touch-up kit untuk pengantin. Sari Ayu Bridal telah menangani lebih dari 300 pernikahan dan menjadi pilihan utama pengantin Jakarta Selatan.', links: { instagram: 'https://instagram.com/sariayu_bridal', whatsapp: 'https://wa.me/6281234567890' }, features: { 'Percobaan Makeup': true, 'Airbrush': true, 'Tata Hijab': true, 'Adat Jawa': true, 'Gaya Modern': true, 'Kit Rias Ulang': true } },
+  { id: 'mua-2', name: 'Glam Studio by Rena', category: 'mua', price: 'Rp 2.800.000', priceNum: 2800000, rating: 4.7, reviews: 192, location: 'Bekasi', experience: '2018', image: 'https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=400&h=300&fit=crop&auto=format', tags: ['Tampilan Natural', 'HD Makeup', 'Layanan di Lokasi'], description: 'Spesialis tampilan natural dan HD makeup untuk pengantin modern menggunakan produk internasional premium seperti Dior Beauty, Laura Mercier, dan Fenty Beauty. Melayani riasan on-location ke seluruh Jabodetabek tanpa biaya tambahan. Tim terdiri dari 3 makeup artist bersertifikat internasional. Cocok untuk pengantin yang menginginkan tampilan clean, glowy, dan fotogenik di kamera maupun video.', links: { instagram: 'https://instagram.com/glamstudio_rena', tiktok: 'https://tiktok.com/@glamstudio_rena' }, features: { 'Percobaan Makeup': true, 'Airbrush': false, 'Tata Hijab': true, 'Adat Jawa': false, 'Gaya Modern': true, 'Kit Rias Ulang': true } },
+  { id: 'mua-3', name: 'Cantik Bersama Dewi', category: 'mua', price: 'Rp 1.900.000', priceNum: 1900000, rating: 4.5, reviews: 108, location: 'Depok', experience: '2021', image: 'https://images.unsplash.com/photo-1562322140-8baeececf3df?w=400&h=300&fit=crop&auto=format', tags: ['Ramah Anggaran', 'Natural', 'Sundanese Adat'], description: 'Pilihan tepat bagi pengantin dengan anggaran terbatas namun tetap menginginkan riasan berkualitas. Spesialis riasan pengantin adat Sunda dengan sanggul tradisional dan tata hijab syar\'i. Menggunakan produk lokal premium seperti Wardah, La Tulipe, dan Make Over yang halal dan cocok untuk kulit tropis. Proses rias biasanya 2–2,5 jam dengan hasil yang rapi dan awet sepanjang hari.', links: { whatsapp: 'https://wa.me/6285678901234', facebook: 'https://facebook.com/cantikbersamadewi' }, features: { 'Percobaan Makeup': false, 'Airbrush': false, 'Tata Hijab': true, 'Adat Jawa': false, 'Gaya Modern': true, 'Kit Rias Ulang': false } },
+  { id: 'mua-4', name: 'Ayu Maharani MUA', category: 'mua', price: 'Rp 4.200.000', priceNum: 4200000, rating: 4.8, reviews: 176, location: 'Surabaya', experience: '2013', image: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=400&h=300&fit=crop&auto=format', tags: ['Airbrush', 'Adat Jawa', 'Premium'], description: 'MUA senior berpengalaman 11 tahun, spesialis riasan pengantin adat Jawa pakem maupun modifikasi. Menggunakan teknik airbrush Dinair dengan produk Giorgio Armani Beauty dan Chanel yang memberikan hasil mewah dan tahan lama hingga 14 jam. Tersedia paket lengkap termasuk riasan ibu mempelai, tata rambut, dan sanggul tradisional. Telah menangani lebih dari 400 klien dari Surabaya, Sidoarjo, Malang, hingga Gresik.', links: { instagram: 'https://instagram.com/ayu_maharani_mua', whatsapp: 'https://wa.me/6281399887766' }, features: { 'Percobaan Makeup': true, 'Airbrush': true, 'Tata Hijab': false, 'Adat Jawa': true, 'Gaya Modern': true, 'Kit Rias Ulang': true } },
+  { id: 'mua-5', name: 'Glow Studio Nadira', category: 'mua', price: 'Rp 2.200.000', priceNum: 2200000, rating: 4.6, reviews: 143, location: 'Tangerang', experience: '2019', image: 'https://images.unsplash.com/photo-1457972729786-0411a3b2b626?w=400&h=300&fit=crop&auto=format', tags: ['Gaya Modern', 'Tampilan Natural', 'Tata Hijab'], description: 'Makeup artist spesialis teknik contouring dan highlighting terkini untuk pengantin hijab maupun non-hijab. Menggunakan produk kulit sensitif yang aman dan breathable seperti Armani Luminous Silk Foundation dan Too Faced setting spray. Tersedia paket bridesmaid up to 5 orang dengan harga khusus. Glow Nadira juga aktif di TikTok dengan 80k+ followers, hasilnya sering viral karena tampilan natural yang tetap memukau di kamera.', links: { instagram: 'https://instagram.com/glow_nadira', tiktok: 'https://tiktok.com/@glow_nadira' }, features: { 'Percobaan Makeup': true, 'Airbrush': false, 'Tata Hijab': true, 'Adat Jawa': false, 'Gaya Modern': true, 'Kit Rias Ulang': true } },
   // DECORATION
-  { id: 'dek-1', name: 'Bloom & Glory Decor', category: 'decoration', price: 'Rp 18.000.000', priceNum: 18000000, rating: 4.9, reviews: 156, location: 'Jakarta Pusat', experience: '2011', image: 'https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=400&h=300&fit=crop&auto=format', tags: ['Bunga Segar', 'Internasional', 'Setup Penuh'], description: 'Dekorasi mewah menggunakan bunga segar impor untuk venue indoor dan outdoor.', links: { instagram: 'https://instagram.com/bloom_glorydecor', website: 'https://bloomglorydecor.com' }, features: { 'Bunga Segar': true, 'Bunga Artificial': false, 'Backdrop': true, 'Dekor Lorong': true, 'Pencahayaan': true, 'Konsultasi Gratis': true } },
-  { id: 'dek-2', name: 'Petal & Sage Studio', category: 'decoration', price: 'Rp 12.500.000', priceNum: 12500000, rating: 4.7, reviews: 98, location: 'Tangerang', experience: '2017', image: 'https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=400&h=300&fit=crop&auto=format', tags: ['Rustic', 'Bohemian', 'Outdoor'], description: 'Spesialis dekorasi rustic dan bohemian dengan suasana romantis alami yang hangat.', links: { instagram: 'https://instagram.com/petal_sage_studio', tiktok: 'https://tiktok.com/@petal_sage_studio' }, features: { 'Bunga Segar': true, 'Bunga Artificial': true, 'Backdrop': true, 'Dekor Lorong': true, 'Pencahayaan': false, 'Konsultasi Gratis': true } },
-  { id: 'dek-3', name: 'Elegance Decoration', category: 'decoration', price: 'Rp 7.500.000', priceNum: 7500000, rating: 4.4, reviews: 74, location: 'Bogor', experience: '2020', image: 'https://images.unsplash.com/photo-1478145046317-39f10e56b5e9?w=400&h=300&fit=crop&auto=format', tags: ['Ramah Anggaran', 'Artificial', 'Indoor'], description: 'Dekorasi estetis dan terjangkau menggunakan bunga artificial berkualitas tinggi.', links: { whatsapp: 'https://wa.me/6281398765432', facebook: 'https://facebook.com/elegancedecoration' }, features: { 'Bunga Segar': false, 'Bunga Artificial': true, 'Backdrop': true, 'Dekor Lorong': false, 'Pencahayaan': false, 'Konsultasi Gratis': false } },
-  { id: 'dek-4', name: 'Floral Dreamscape', category: 'decoration', price: 'Rp 22.000.000', priceNum: 22000000, rating: 4.8, reviews: 87, location: 'Jakarta Selatan', experience: '2010', image: 'https://images.unsplash.com/photo-1561128290-000e0e56d9a5?w=400&h=300&fit=crop&auto=format', tags: ['Premium', 'Full Setup', 'Bunga Segar'], description: 'Dekorasi pernikahan premium dengan bunga segar pilihan dan tata cahaya dramatis untuk venue eksklusif.', links: { instagram: 'https://instagram.com/floral_dreamscape', website: 'https://floraldreamscape.id' }, features: { 'Bunga Segar': true, 'Bunga Artificial': false, 'Backdrop': true, 'Dekor Lorong': true, 'Pencahayaan': true, 'Konsultasi Gratis': true } },
-  { id: 'dek-5', name: 'Dekorasi Mulia Mandiri', category: 'decoration', price: 'Rp 5.500.000', priceNum: 5500000, rating: 4.4, reviews: 112, location: 'Bekasi', experience: '2017', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop&auto=format', tags: ['Anggaran Hemat', 'Indoor', 'Paket Lengkap'], description: 'Dekorasi pernikahan lengkap dengan harga bersaing, cocok untuk gedung serbaguna dan rumah.', links: { whatsapp: 'https://wa.me/6281500600700', instagram: 'https://instagram.com/dekorasi_mulia' }, features: { 'Bunga Segar': false, 'Bunga Artificial': true, 'Backdrop': true, 'Dekor Lorong': true, 'Pencahayaan': false, 'Konsultasi Gratis': true } },
+  { id: 'dek-1', name: 'Bloom & Glory Decor', category: 'decoration', price: 'Rp 18.000.000', priceNum: 18000000, rating: 4.9, reviews: 156, location: 'Jakarta Pusat', experience: '2011', image: 'https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=400&h=300&fit=crop&auto=format', tags: ['Bunga Segar', 'Internasional', 'Setup Penuh'], description: 'Penyedia dekorasi pernikahan mewah kelas atas dengan pengalaman 13 tahun. Menggunakan bunga segar impor pilihan seperti garden rose, peony, hydrangea, dan baby\'s breath dari Belanda dan Ekuador. Melayani venue indoor gedung bintang 5 hingga outdoor di resort. Tim terdiri dari 15 dekorator profesional yang mampu setup dalam waktu 8 jam. Konsultasi dan site visit gratis, serta ada paket all-in termasuk dekor pelaminan, lorong, meja tamu, dan photozone.', links: { instagram: 'https://instagram.com/bloom_glorydecor', website: 'https://bloomglorydecor.com' }, features: { 'Bunga Segar': true, 'Bunga Artificial': false, 'Backdrop': true, 'Dekor Lorong': true, 'Pencahayaan': true, 'Konsultasi Gratis': true } },
+  { id: 'dek-2', name: 'Petal & Sage Studio', category: 'decoration', price: 'Rp 12.500.000', priceNum: 12500000, rating: 4.7, reviews: 98, location: 'Tangerang', experience: '2017', image: 'https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=400&h=300&fit=crop&auto=format', tags: ['Rustic', 'Bohemian', 'Outdoor'], description: 'Studio dekorasi kreatif spesialis konsep rustic, bohemian, dan woodland yang hangat dan romantis. Menggunakan material natural seperti kayu pallet, dedaunan hijau, dried flower, dan bunga lokal. Cocok untuk venue outdoor, taman, villa, maupun gedung dengan kesan semi-outdoor. Setiap dekorasi dirancang custom sesuai mood board pasangan. Tim juga menyediakan backdrop neon sign dan photobooth digital sebagai pelengkap.', links: { instagram: 'https://instagram.com/petal_sage_studio', tiktok: 'https://tiktok.com/@petal_sage_studio' }, features: { 'Bunga Segar': true, 'Bunga Artificial': true, 'Backdrop': true, 'Dekor Lorong': true, 'Pencahayaan': false, 'Konsultasi Gratis': true } },
+  { id: 'dek-3', name: 'Elegance Decoration', category: 'decoration', price: 'Rp 7.500.000', priceNum: 7500000, rating: 4.4, reviews: 74, location: 'Bogor', experience: '2020', image: 'https://images.unsplash.com/photo-1478145046317-39f10e56b5e9?w=400&h=300&fit=crop&auto=format', tags: ['Ramah Anggaran', 'Artificial', 'Indoor'], description: 'Solusi dekorasi pernikahan estetis dengan anggaran terbatas menggunakan bunga artificial kualitas premium yang tampak nyata dan tahan lama. Cocok untuk venue indoor gedung serbaguna, aula, dan rumah. Tersedia lebih dari 50 pilihan warna dan tema termasuk elegant white, dusty rose, sage green, dan gold. Backdrop dan pelaminan dapat dicustom sesuai permintaan. Pengiriman dan setup tersedia di area Bogor, Depok, dan Tangerang.', links: { whatsapp: 'https://wa.me/6281398765432', facebook: 'https://facebook.com/elegancedecoration' }, features: { 'Bunga Segar': false, 'Bunga Artificial': true, 'Backdrop': true, 'Dekor Lorong': false, 'Pencahayaan': false, 'Konsultasi Gratis': false } },
+  { id: 'dek-4', name: 'Floral Dreamscape', category: 'decoration', price: 'Rp 22.000.000', priceNum: 22000000, rating: 4.8, reviews: 87, location: 'Jakarta Selatan', experience: '2010', image: 'https://images.unsplash.com/photo-1561128290-000e0e56d9a5?w=400&h=300&fit=crop&auto=format', tags: ['Premium', 'Full Setup', 'Bunga Segar'], description: 'Dekorasi pernikahan premium yang telah memenangkan penghargaan Best Wedding Decor 2022 versi Wedding Market Indonesia. Menggunakan bunga segar pilihan dengan pencahayaan dramatis dari lampu Edison, fairy lights, dan spotlight teatrikal untuk venue eksklusif. Spesialis altar floral arch, ceiling flower installation, dan floral wall bertema mewah. Berpengalaman di Grand Ballroom hotel berbintang 5 di Jakarta dan Bali. Tim berjumlah 20+ orang dengan koordinator lapangan berdedikasi.', links: { instagram: 'https://instagram.com/floral_dreamscape', website: 'https://floraldreamscape.id' }, features: { 'Bunga Segar': true, 'Bunga Artificial': false, 'Backdrop': true, 'Dekor Lorong': true, 'Pencahayaan': true, 'Konsultasi Gratis': true } },
+  { id: 'dek-5', name: 'Dekorasi Mulia Mandiri', category: 'decoration', price: 'Rp 5.500.000', priceNum: 5500000, rating: 4.4, reviews: 112, location: 'Bekasi', experience: '2017', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop&auto=format', tags: ['Anggaran Hemat', 'Indoor', 'Paket Lengkap'], description: 'Pilihan dekorasi pernikahan terlengkap dengan harga bersaing di area Bekasi dan sekitarnya. Menyediakan paket dekor pelaminan, lorong, meja tamu, dan gerbang buatan dengan pilihan tema modern, islami, hingga tradisional. Bunga artificial kualitas baik dengan warna vivid dan tahan debu. Setup cepat dalam 5–6 jam. Tersedia paket all-in termasuk sewa kursi, meja, backdrop, dan sound system untuk menghemat biaya koordinasi vendor.', links: { whatsapp: 'https://wa.me/6281500600700', instagram: 'https://instagram.com/dekorasi_mulia' }, features: { 'Bunga Segar': false, 'Bunga Artificial': true, 'Backdrop': true, 'Dekor Lorong': true, 'Pencahayaan': false, 'Konsultasi Gratis': true } },
   // MC
-  { id: 'mc-1', name: 'Hendro MC Professional', category: 'mc', price: 'Rp 4.500.000', priceNum: 4500000, rating: 4.9, reviews: 320, location: 'Jakarta', experience: '2008', image: 'https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=400&h=300&fit=crop&auto=format', tags: ['Bilingual', 'Javanese Adat', 'Gereja'], description: 'MC senior dengan penyampaian elegan dan timing sempurna untuk segala suasana pernikahan.', links: { instagram: 'https://instagram.com/hendro_mc', whatsapp: 'https://wa.me/6281987654321' }, features: { 'Bilingual': true, 'Javanese Adat': true, 'Akad Nikah': true, 'Gereja': true, 'Sound System': false, 'Rundown Acara': true } },
-  { id: 'mc-2', name: 'Tania & Co MC', category: 'mc', price: 'Rp 3.200.000', priceNum: 3200000, rating: 4.7, reviews: 148, location: 'Bandung', experience: '2016', image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=300&fit=crop&auto=format', tags: ['MC Wanita', 'Modern', 'Interaktif'], description: 'MC wanita yang energik dan interaktif, sempurna untuk resepsi modern dan garden party.', links: { instagram: 'https://instagram.com/tania_mc', tiktok: 'https://tiktok.com/@tania_mc', facebook: 'https://facebook.com/taniacomc' }, features: { 'Bilingual': true, 'Javanese Adat': false, 'Akad Nikah': false, 'Gereja': true, 'Sound System': false, 'Rundown Acara': true } },
-  { id: 'mc-3', name: 'Bima Satria MC', category: 'mc', price: 'Rp 2.000.000', priceNum: 2000000, rating: 4.4, reviews: 89, location: 'Yogyakarta', experience: '2020', image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=300&fit=crop&auto=format', tags: ['Javanese Adat', 'Javanese Language', 'Anggaran Hemat'], description: 'Spesialis MC adat Jawa dengan fasih berbahasa Jawa Krama Inggil.', links: { whatsapp: 'https://wa.me/6282345678901' }, features: { 'Bilingual': false, 'Javanese Adat': true, 'Akad Nikah': true, 'Gereja': false, 'Sound System': true, 'Rundown Acara': true } },
-  { id: 'mc-4', name: 'Rizky Pratama MC', category: 'mc', price: 'Rp 3.800.000', priceNum: 3800000, rating: 4.8, reviews: 201, location: 'Surabaya', experience: '2014', image: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=400&h=300&fit=crop&auto=format', tags: ['Bilingual', 'Interaktif', 'Akad Nikah'], description: 'MC profesional bilingual dengan gaya pembawaan yang hangat dan personal untuk setiap momen pernikahan.', links: { instagram: 'https://instagram.com/rizky_mc', whatsapp: 'https://wa.me/6281600700800' }, features: { 'Bilingual': true, 'Adat Jawa': false, 'Akad Nikah': true, 'Gereja': false, 'Sound System': true, 'Rundown Acara': true } },
-  { id: 'mc-5', name: 'Siti Rahayu MC Pernikahan', category: 'mc', price: 'Rp 1.800.000', priceNum: 1800000, rating: 4.3, reviews: 78, location: 'Yogyakarta', experience: '2020', image: 'https://images.unsplash.com/photo-1573496799652-408c2ac9fe98?w=400&h=300&fit=crop&auto=format', tags: ['MC Wanita', 'Anggaran Hemat', 'Adat Jawa'], description: 'MC wanita berpengalaman dengan keahlian adat Jawa dan pembawaan yang anggun dan berwibawa.', links: { whatsapp: 'https://wa.me/6282300400500' }, features: { 'Bilingual': false, 'Adat Jawa': true, 'Akad Nikah': true, 'Gereja': false, 'Sound System': false, 'Rundown Acara': true } },
+  { id: 'mc-1', name: 'Hendro MC Professional', category: 'mc', price: 'Rp 4.500.000', priceNum: 4500000, rating: 4.9, reviews: 320, location: 'Jakarta', experience: '2008', image: 'https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=400&h=300&fit=crop&auto=format', tags: ['Bilingual', 'Javanese Adat', 'Gereja'], description: 'MC senior dengan 16 tahun pengalaman membawakan lebih dari 500 pernikahan di seluruh Indonesia. Fasih bilingual Indonesia–Inggris dengan penyampaian yang elegan, hangat, dan selalu tepat waktu. Spesialis prosesi akad nikah, adat Jawa, dan pemberkatan gereja. Hendro dikenal karena kemampuannya membaca suasana dan mengelola momen tak terduga dengan profesional. Tersedia paket bundling dengan sound system dan rundown acara tertulis detail.', links: { instagram: 'https://instagram.com/hendro_mc', whatsapp: 'https://wa.me/6281987654321' }, features: { 'Bilingual': true, 'Javanese Adat': true, 'Akad Nikah': true, 'Gereja': true, 'Sound System': false, 'Rundown Acara': true } },
+  { id: 'mc-2', name: 'Tania & Co MC', category: 'mc', price: 'Rp 3.200.000', priceNum: 3200000, rating: 4.7, reviews: 148, location: 'Bandung', experience: '2016', image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=300&fit=crop&auto=format', tags: ['MC Wanita', 'Modern', 'Interaktif'], description: 'MC wanita energik dan interaktif dengan gaya pembawaan yang fresh, modern, dan tetap elegan. Berpengalaman dalam resepsi modern, garden party, intimate wedding, hingga event hybrid online-offline. Fasih bilingual Indonesia–Inggris, cocok untuk tamu campuran lokal dan internasional. Tania juga menyediakan layanan konsultasi rundown acara gratis dan siap berkoordinasi langsung dengan tim WO maupun keluarga untuk memastikan acara berjalan mulus.', links: { instagram: 'https://instagram.com/tania_mc', tiktok: 'https://tiktok.com/@tania_mc', facebook: 'https://facebook.com/taniacomc' }, features: { 'Bilingual': true, 'Javanese Adat': false, 'Akad Nikah': false, 'Gereja': true, 'Sound System': false, 'Rundown Acara': true } },
+  { id: 'mc-3', name: 'Bima Satria MC', category: 'mc', price: 'Rp 2.000.000', priceNum: 2000000, rating: 4.4, reviews: 89, location: 'Yogyakarta', experience: '2020', image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=300&fit=crop&auto=format', tags: ['Javanese Adat', 'Javanese Language', 'Anggaran Hemat'], description: 'MC muda berbakat dengan spesialisasi kuat dalam prosesi pernikahan adat Jawa. Fasih menggunakan Bahasa Jawa Krama Inggil yang halus dan tepat untuk siraman, midodareni, akad, hingga resepsi. Memahami secara mendalam filosofi dan urutan prosesi adat Jawa klasik maupun modifikasi. Tersedia paket bundling dengan sound system portabel. Cocok untuk pernikahan sederhana namun berkesan di daerah Yogyakarta, Klaten, Magelang, dan sekitarnya.', links: { whatsapp: 'https://wa.me/6282345678901' }, features: { 'Bilingual': false, 'Javanese Adat': true, 'Akad Nikah': true, 'Gereja': false, 'Sound System': true, 'Rundown Acara': true } },
+  { id: 'mc-4', name: 'Rizky Pratama MC', category: 'mc', price: 'Rp 3.800.000', priceNum: 3800000, rating: 4.8, reviews: 201, location: 'Surabaya', experience: '2014', image: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=400&h=300&fit=crop&auto=format', tags: ['Bilingual', 'Interaktif', 'Akad Nikah'], description: 'MC profesional bilingual Indonesia–Inggris dengan gaya pembawaan yang hangat, personal, dan selalu disesuaikan dengan karakter pasangan. Berpengalaman membawakan akad nikah, resepsi modern, intimate wedding, dan pernikahan di venue luar kota. Sound system profesional sudah termasuk dalam paket. Rizky dikenal karena selalu hadir untuk gladi resik H-1 tanpa biaya tambahan dan menyiapkan script MC yang dipersonalisasi khusus untuk setiap pasangan.', links: { instagram: 'https://instagram.com/rizky_mc', whatsapp: 'https://wa.me/6281600700800' }, features: { 'Bilingual': true, 'Adat Jawa': false, 'Akad Nikah': true, 'Gereja': false, 'Sound System': true, 'Rundown Acara': true } },
+  { id: 'mc-5', name: 'Siti Rahayu MC Pernikahan', category: 'mc', price: 'Rp 1.800.000', priceNum: 1800000, rating: 4.3, reviews: 78, location: 'Yogyakarta', experience: '2020', image: 'https://images.unsplash.com/photo-1573496799652-408c2ac9fe98?w=400&h=300&fit=crop&auto=format', tags: ['MC Wanita', 'Anggaran Hemat', 'Adat Jawa'], description: 'MC wanita dengan pembawaan anggun, berwibawa, dan penuh empati untuk prosesi pernikahan yang sakral. Spesialis adat Jawa termasuk siraman, midodareni, akad nikah, dan resepsi dengan bahasa Jawa Krama yang tepat. Memiliki latar belakang seni budaya Jawa sehingga mampu menjelaskan makna setiap prosesi kepada tamu. Harga sangat terjangkau dengan kualitas yang tidak kalah dari MC senior. Aktif melayani wilayah DIY, Jawa Tengah, dan Jawa Timur bagian barat.', links: { whatsapp: 'https://wa.me/6282300400500' }, features: { 'Bilingual': false, 'Adat Jawa': true, 'Akad Nikah': true, 'Gereja': false, 'Sound System': false, 'Rundown Acara': true } },
   // MUSIC
-  { id: 'mus-1', name: 'Harmoni Wedding Band', category: 'music', price: 'Rp 12.000.000', priceNum: 12000000, rating: 4.9, reviews: 201, location: 'Jakarta', experience: '2012', image: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=400&h=300&fit=crop&auto=format', tags: ['Live Band', '7 Members', 'Jazz & Pop'], description: 'Band pernikahan profesional beranggotakan 7 orang dengan repertoar jazz, pop, dan keroncong.', links: { instagram: 'https://instagram.com/harmoni_band', website: 'https://harmoniband.id', whatsapp: 'https://wa.me/6281123456789' }, features: { 'Live Band': true, 'Akustik': true, 'Kuartet Gesek': false, 'Gamelan': false, 'Sound System': true, 'Repertoar Kustom': true } },
-  { id: 'mus-2', name: 'Senar Emas Quartet', category: 'music', price: 'Rp 8.500.000', priceNum: 8500000, rating: 4.8, reviews: 134, location: 'Surabaya', experience: '2015', image: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=300&fit=crop&auto=format', tags: ['Kuartet Gesek', 'Klasik', 'Akad Nikah'], description: 'Kuartet gesek klasik yang sempurna untuk prosesi akad nikah dan jalan masuk pengantin.', links: { instagram: 'https://instagram.com/senar_emas', facebook: 'https://facebook.com/senaremas' }, features: { 'Live Band': false, 'Akustik': true, 'Kuartet Gesek': true, 'Gamelan': false, 'Sound System': false, 'Repertoar Kustom': true } },
-  { id: 'mus-3', name: 'Nusantara Gamelan Group', category: 'music', price: 'Rp 6.000.000', priceNum: 6000000, rating: 4.6, reviews: 67, location: 'Yogyakarta', experience: '2006', image: 'https://images.unsplash.com/photo-1507838153414-b4b713384a76?w=400&h=300&fit=crop&auto=format', tags: ['Gamelan', 'Javanese Adat', 'Tradisional'], description: 'Ensemble gamelan Jawa otentik dengan pengalaman lebih dari dua dekade di pernikahan tradisional.', links: { whatsapp: 'https://wa.me/6287654321098', facebook: 'https://facebook.com/nusantaragamelan' }, features: { 'Live Band': false, 'Akustik': true, 'Kuartet Gesek': false, 'Gamelan': true, 'Sound System': true, 'Repertoar Kustom': false } },
-  { id: 'mus-4', name: 'Akustik Cinta Duo', category: 'music', price: 'Rp 4.500.000', priceNum: 4500000, rating: 4.7, reviews: 98, location: 'Bandung', experience: '2016', image: 'https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=400&h=300&fit=crop&auto=format', tags: ['Live Band', 'Akustik', 'Romantis'], description: 'Duo akustik romantis membawakan lagu-lagu pilihan untuk momen akad dan resepsi yang tak terlupakan.', links: { instagram: 'https://instagram.com/akustik_cinta', whatsapp: 'https://wa.me/6281700800900' }, features: { 'Live Band': false, 'Akustik': true, 'Kuartet Gesek': false, 'Gamelan': false, 'Sound System': true, 'Repertoar Kustom': true } },
-  { id: 'mus-5', name: 'All Genre Wedding Band', category: 'music', price: 'Rp 18.000.000', priceNum: 18000000, rating: 4.9, reviews: 154, location: 'Jakarta', experience: '2009', image: 'https://images.unsplash.com/photo-1501612780327-45045538702b?w=400&h=300&fit=crop&auto=format', tags: ['Live Band', 'Sound System', 'Repertoar Kustom'], description: 'Band pernikahan lengkap dengan 10 personel, membawakan semua genre dari pop hingga jazz dan keroncong.', links: { instagram: 'https://instagram.com/allgenre_band', website: 'https://allgenreband.com', whatsapp: 'https://wa.me/6281234500000' }, features: { 'Live Band': true, 'Akustik': true, 'Kuartet Gesek': false, 'Gamelan': false, 'Sound System': true, 'Repertoar Kustom': true } },
+  { id: 'mus-1', name: 'Harmoni Wedding Band', category: 'music', price: 'Rp 12.000.000', priceNum: 12000000, rating: 4.9, reviews: 201, location: 'Jakarta', experience: '2012', image: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=400&h=300&fit=crop&auto=format', tags: ['Live Band', '7 Members', 'Jazz & Pop'], description: 'Band pernikahan premium beranggotakan 7 musisi profesional lulusan sekolah musik ternama. Repertoar mencakup jazz, pop Indonesia, pop mancanegara, dan keroncong romantis. Menggunakan sound system berkualitas tinggi dengan engineer suara berdedikasi untuk memastikan kualitas audio terbaik di setiap venue. Tersedia paket pra-pernikahan (live music akustik untuk siraman/midodareni) dan paket resepsi penuh. Berpengalaman tampil di lebih dari 200 pernikahan dan event hotel bintang 5.', links: { instagram: 'https://instagram.com/harmoni_band', website: 'https://harmoniband.id', whatsapp: 'https://wa.me/6281123456789' }, features: { 'Live Band': true, 'Akustik': true, 'Kuartet Gesek': false, 'Gamelan': false, 'Sound System': true, 'Repertoar Kustom': true } },
+  { id: 'mus-2', name: 'Senar Emas Quartet', category: 'music', price: 'Rp 8.500.000', priceNum: 8500000, rating: 4.8, reviews: 134, location: 'Surabaya', experience: '2015', image: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=300&fit=crop&auto=format', tags: ['Kuartet Gesek', 'Klasik', 'Akad Nikah'], description: 'Kuartet gesek profesional terdiri dari 2 biola, 1 biola alto, dan 1 cello dengan kualitas suara yang mewah dan menghanyutkan. Sempurna untuk mengisi suasana prosesi akad nikah, jalan masuk pengantin, dan cocktail hour. Mampu membawakan musik klasik (Bach, Vivaldi), pop romantis (Ed Sheeran, John Legend), hingga lagu Nusantara dalam aransemen gesek yang indah. Semua anggota berpengalaman tampil di event internasional dan bersedia menerima request lagu custom.', links: { instagram: 'https://instagram.com/senar_emas', facebook: 'https://facebook.com/senaremas' }, features: { 'Live Band': false, 'Akustik': true, 'Kuartet Gesek': true, 'Gamelan': false, 'Sound System': false, 'Repertoar Kustom': true } },
+  { id: 'mus-3', name: 'Nusantara Gamelan Group', category: 'music', price: 'Rp 6.000.000', priceNum: 6000000, rating: 4.6, reviews: 67, location: 'Yogyakarta', experience: '2006', image: 'https://images.unsplash.com/photo-1507838153414-b4b713384a76?w=400&h=300&fit=crop&auto=format', tags: ['Gamelan', 'Javanese Adat', 'Tradisional'], description: 'Ensemble gamelan Jawa otentik beranggotakan 12 penabuh berpengalaman lebih dari dua dekade dalam pernikahan adat. Memainkan gendhing-gendhing Jawa klasik seperti Ladrang Wilujeng, Gendhing Ketawang Sri Narendra, dan lancaran untuk pengiring prosesi siraman, midodareni, dan panggih. Instrumen gamelan asli dari kayu jati dan perunggu berkualitas tinggi. Tersedia pula paket campuran gamelan + keroncong untuk resepsi yang lebih variatif.', links: { whatsapp: 'https://wa.me/6287654321098', facebook: 'https://facebook.com/nusantaragamelan' }, features: { 'Live Band': false, 'Akustik': true, 'Kuartet Gesek': false, 'Gamelan': true, 'Sound System': true, 'Repertoar Kustom': false } },
+  { id: 'mus-4', name: 'Akustik Cinta Duo', category: 'music', price: 'Rp 4.500.000', priceNum: 4500000, rating: 4.7, reviews: 98, location: 'Bandung', experience: '2016', image: 'https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=400&h=300&fit=crop&auto=format', tags: ['Live Band', 'Akustik', 'Romantis'], description: 'Duo akustik romantis dengan suara yang harmonis dan hangat, ideal untuk intimate wedding, akad nikah, dan cocktail hour. Membawakan lagu-lagu pilihan dalam genre pop romantis, bossa nova, dan acoustic cover dari musisi favorit pasangan. Menggunakan gitar akustik premium dan vokal dua suara yang saling melengkapi. Tersedia request lagu khusus (first dance song) yang dilatih minimal 2 minggu sebelum hari-H tanpa biaya tambahan.', links: { instagram: 'https://instagram.com/akustik_cinta', whatsapp: 'https://wa.me/6281700800900' }, features: { 'Live Band': false, 'Akustik': true, 'Kuartet Gesek': false, 'Gamelan': false, 'Sound System': true, 'Repertoar Kustom': true } },
+  { id: 'mus-5', name: 'All Genre Wedding Band', category: 'music', price: 'Rp 18.000.000', priceNum: 18000000, rating: 4.9, reviews: 154, location: 'Jakarta', experience: '2009', image: 'https://images.unsplash.com/photo-1501612780327-45045538702b?w=400&h=300&fit=crop&auto=format', tags: ['Live Band', 'Sound System', 'Repertoar Kustom'], description: 'Band pernikahan all-genre terlengkap di Jakarta dengan 10 personel profesional termasuk brass section (saxophone, trumpet, trombone). Mampu memainkan semua genre: pop, jazz, R&B, keroncong, dangdut koplo, hingga EDM untuk pesta after party. Dilengkapi sound system 20.000 watt, 4 monitor panggung, dan lighting otomatis yang mengikuti ritme musik. Tersedia paket custom dari 2 jam hingga full night dan dapat digabung dengan DJ set sebagai pelengkap.', links: { instagram: 'https://instagram.com/allgenre_band', website: 'https://allgenreband.com', whatsapp: 'https://wa.me/6281234500000' }, features: { 'Live Band': true, 'Akustik': true, 'Kuartet Gesek': false, 'Gamelan': false, 'Sound System': true, 'Repertoar Kustom': true } },
   // CATERING
-  { id: 'cat-1', name: 'Mustika Rasa Catering', category: 'catering', price: 'Rp 95.000/pax', priceNum: 95000, rating: 4.8, reviews: 412, location: 'Jakarta', experience: '2004', image: 'https://images.unsplash.com/photo-1555244162-803834f70033?w=400&h=300&fit=crop&auto=format', tags: ['500–5000 pax', 'Buffet', 'Sertifikasi Halal'], description: 'Katering premium berkapasitas besar dengan pilihan menu Nusantara dan internasional.', links: { website: 'https://mustarasa.co.id', instagram: 'https://instagram.com/mustika_rasa', whatsapp: 'https://wa.me/6281200001111' }, features: { 'Sertifikasi Halal': true, 'Vegetarian': true, 'Menu Barat': true, 'Menu Nusantara': true, 'Live Cooking': true, 'Dekor Meja': true } },
-  { id: 'cat-2', name: 'Dapur Istimewa', category: 'catering', price: 'Rp 72.000/pax', priceNum: 72000, rating: 4.7, reviews: 289, location: 'Bandung', experience: '2010', image: 'https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=400&h=300&fit=crop&auto=format', tags: ['100–2000 pax', 'Fusion', 'Halal'], description: 'Katering fusion unik yang memadukan cita rasa lokal dan internasional secara harmonis.', links: { website: 'https://dapuristimewa.com', facebook: 'https://facebook.com/dapuristimewa' }, features: { 'Sertifikasi Halal': true, 'Vegetarian': true, 'Menu Barat': true, 'Menu Nusantara': true, 'Live Cooking': false, 'Dekor Meja': true } },
-  { id: 'cat-3', name: 'Sederhana Barakah', category: 'catering', price: 'Rp 45.000/pax', priceNum: 45000, rating: 4.5, reviews: 178, location: 'Bekasi', experience: '2016', image: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&h=300&fit=crop&auto=format', tags: ['50–1000 pax', 'Anggaran Hemat', 'Halal'], description: 'Katering terjangkau dengan masakan Betawi dan Jawa yang autentik.', links: { instagram: 'https://instagram.com/sederhana_barakah', whatsapp: 'https://wa.me/6289876543210' }, features: { 'Sertifikasi Halal': true, 'Vegetarian': false, 'Menu Barat': false, 'Menu Nusantara': true, 'Live Cooking': false, 'Dekor Meja': false } },
-  { id: 'cat-4', name: 'Nusarasa Catering Premium', category: 'catering', price: 'Rp 115.000/pax', priceNum: 115000, rating: 4.9, reviews: 321, location: 'Jakarta Selatan', experience: '2007', image: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400&h=300&fit=crop&auto=format', tags: ['Premium', 'Live Cooking', 'Sertifikasi Halal'], description: 'Katering premium dengan chef berpengalaman, menyajikan hidangan Nusantara dan internasional terbaik.', links: { website: 'https://nusarasa.co.id', instagram: 'https://instagram.com/nusarasa_catering', whatsapp: 'https://wa.me/6281900000111' }, features: { 'Sertifikasi Halal': true, 'Vegetarian': true, 'Menu Barat': true, 'Menu Nusantara': true, 'Live Cooking': true, 'Dekor Meja': true } },
-  { id: 'cat-5', name: 'Katering Berkah Sejahtera', category: 'catering', price: 'Rp 38.000/pax', priceNum: 38000, rating: 4.3, reviews: 198, location: 'Bogor', experience: '2015', image: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=400&h=300&fit=crop&auto=format', tags: ['Anggaran Hemat', 'Sertifikasi Halal', 'Min. 100 pax'], description: 'Katering halal dengan harga ekonomis tanpa mengorbankan kualitas rasa, cocok untuk pesta sederhana.', links: { whatsapp: 'https://wa.me/6282100200300', instagram: 'https://instagram.com/katering_berkah' }, features: { 'Sertifikasi Halal': true, 'Vegetarian': false, 'Menu Barat': false, 'Menu Nusantara': true, 'Live Cooking': false, 'Dekor Meja': false } },
+  { id: 'cat-1', name: 'Mustika Rasa Catering', category: 'catering', price: 'Rp 95.000/pax', priceNum: 95000, rating: 4.8, reviews: 412, location: 'Jakarta', experience: '2004', image: 'https://images.unsplash.com/photo-1555244162-803834f70033?w=400&h=300&fit=crop&auto=format', tags: ['500–5000 pax', 'Buffet', 'Sertifikasi Halal'], description: 'Katering pernikahan premium bersertifikat halal MUI dengan kapasitas 500–5000 pax. Telah melayani lebih dari 1000 pernikahan sejak 2004 termasuk acara kenegaraan dan VVIP. Menu mencakup 50+ pilihan masakan Nusantara dan internasional dengan opsi live cooking station (dim sum, sate, grill, pasta). Semua bahan segar dipilih harian, chef berpengalaman 15+ tahun, dan tim service terlatih memakai seragam resmi. Gratis dekor meja dan ice carving untuk pesanan di atas 500 pax.', links: { website: 'https://mustarasa.co.id', instagram: 'https://instagram.com/mustika_rasa', whatsapp: 'https://wa.me/6281200001111' }, features: { 'Sertifikasi Halal': true, 'Vegetarian': true, 'Menu Barat': true, 'Menu Nusantara': true, 'Live Cooking': true, 'Dekor Meja': true } },
+  { id: 'cat-2', name: 'Dapur Istimewa', category: 'catering', price: 'Rp 72.000/pax', priceNum: 72000, rating: 4.7, reviews: 289, location: 'Bandung', experience: '2010', image: 'https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=400&h=300&fit=crop&auto=format', tags: ['100–2000 pax', 'Fusion', 'Halal'], description: 'Katering dengan konsep fusion modern yang memadukan teknik memasak internasional dengan bahan dan rempah lokal Indonesia. Dikelola oleh chef lulusan Le Cordon Bleu Jakarta. Menu andalan: rendang saus truffle, nasi goreng mentai, sate jamur dengan saus fusion, dan dessert macaron batik. Kapasitas 100–2000 pax dengan paket semi-buffet maupun plated dinner elegan. Sertifikasi halal MUI aktif dan tersedia opsi menu vegetarian dan vegan.', links: { website: 'https://dapuristimewa.com', facebook: 'https://facebook.com/dapuristimewa' }, features: { 'Sertifikasi Halal': true, 'Vegetarian': true, 'Menu Barat': true, 'Menu Nusantara': true, 'Live Cooking': false, 'Dekor Meja': true } },
+  { id: 'cat-3', name: 'Sederhana Barakah', category: 'catering', price: 'Rp 45.000/pax', priceNum: 45000, rating: 4.5, reviews: 178, location: 'Bekasi', experience: '2016', image: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&h=300&fit=crop&auto=format', tags: ['50–1000 pax', 'Anggaran Hemat', 'Halal'], description: 'Katering rumahan dengan cita rasa autentik masakan Betawi dan Jawa yang lezat dan familiar. Menu favorit: nasi uduk Betawi, ayam bakar kecap, semur daging, sayur asem, dan aneka gorengan hangat. Halal tanpa MSG dengan bahan segar yang dimasak di hari yang sama. Kapasitas 50–1000 pax cocok untuk resepsi di rumah, tenda, maupun gedung serbaguna. Harga paling terjangkau di area Bekasi dengan kualitas yang konsisten dan rasa yang tidak pernah mengecewakan.', links: { instagram: 'https://instagram.com/sederhana_barakah', whatsapp: 'https://wa.me/6289876543210' }, features: { 'Sertifikasi Halal': true, 'Vegetarian': false, 'Menu Barat': false, 'Menu Nusantara': true, 'Live Cooking': false, 'Dekor Meja': false } },
+  { id: 'cat-4', name: 'Nusarasa Catering Premium', category: 'catering', price: 'Rp 115.000/pax', priceNum: 115000, rating: 4.9, reviews: 321, location: 'Jakarta Selatan', experience: '2007', image: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400&h=300&fit=crop&auto=format', tags: ['Premium', 'Live Cooking', 'Sertifikasi Halal'], description: 'Katering premium dengan executive chef berpengalaman 20+ tahun di hotel berbintang. Menyajikan hidangan Nusantara otentik (gulai kambing, rendang wagyu, soto Betawi) dan internasional (grilled salmon, beef tenderloin, pasta arrabbiata) dalam penyajian plated dinner maupun grand buffet. Live cooking station tersedia: BBQ grill, sushi counter, dan dessert bar. Tersertifikasi halal MUI dan ISO 9001. Melayani 200–3000 pax dengan koordinator katering khusus per event.', links: { website: 'https://nusarasa.co.id', instagram: 'https://instagram.com/nusarasa_catering', whatsapp: 'https://wa.me/6281900000111' }, features: { 'Sertifikasi Halal': true, 'Vegetarian': true, 'Menu Barat': true, 'Menu Nusantara': true, 'Live Cooking': true, 'Dekor Meja': true } },
+  { id: 'cat-5', name: 'Katering Berkah Sejahtera', category: 'catering', price: 'Rp 38.000/pax', priceNum: 38000, rating: 4.3, reviews: 198, location: 'Bogor', experience: '2015', image: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=400&h=300&fit=crop&auto=format', tags: ['Anggaran Hemat', 'Sertifikasi Halal', 'Min. 100 pax'], description: 'Katering halal ekonomis yang tidak mengorbankan kualitas rasa. Spesialis menu prasmanan sederhana namun memuaskan: nasi putih, ayam goreng/bakar, tumis sayur, tempe tahu, dan es buah segar. Cocok untuk pesta sederhana di rumah, arisan, maupun walimahan dengan anggaran terbatas. Minimum order 100 pax, tersedia perlengkapan makan lengkap (piring, sendok, gelas). Pengiriman gratis radius 15 km dari Bogor Kota dengan armada pendingin higienis.', links: { whatsapp: 'https://wa.me/6282100200300', instagram: 'https://instagram.com/katering_berkah' }, features: { 'Sertifikasi Halal': true, 'Vegetarian': false, 'Menu Barat': false, 'Menu Nusantara': true, 'Live Cooking': false, 'Dekor Meja': false } },
   // PHOTO
-  { id: 'fv-1', name: 'Lensa Cinta Studio', category: 'photo', price: 'Rp 15.000.000', priceNum: 15000000, rating: 4.9, reviews: 267, location: 'Jakarta', experience: '2013', image: 'https://images.unsplash.com/photo-1606216794074-735e91aa2c92?w=400&h=300&fit=crop&auto=format', tags: ['Sinematik', 'Drone', 'Premium Album'], description: 'Dokumentasi pernikahan sinematik dengan drone dan hasil editing bertaraf internasional.', links: { website: 'https://lensacinta.com', instagram: 'https://instagram.com/lensacinta_studio' }, features: { 'Fotografi': true, 'Videografi': true, 'Drone': true, 'Same Day Edit': true, 'Album Fisik': true, 'Pre-wedding': true } },
-  { id: 'fv-2', name: 'Moment Abadi Photo', category: 'photo', price: 'Rp 9.500.000', priceNum: 9500000, rating: 4.7, reviews: 189, location: 'Surabaya', experience: '2017', image: 'https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=400&h=300&fit=crop&auto=format', tags: ['Foto Saja', 'Editorial', 'Candid'], description: 'Fotografi candid editorial yang menangkap momen pernikahan autentik dan penuh emosi.', links: { instagram: 'https://instagram.com/momentabadi', tiktok: 'https://tiktok.com/@momentabadi' }, features: { 'Fotografi': true, 'Videografi': false, 'Drone': false, 'Same Day Edit': false, 'Album Fisik': true, 'Pre-wedding': true } },
-  { id: 'fv-3', name: 'Cerita Kita Videography', category: 'photo', price: 'Rp 6.800.000', priceNum: 6800000, rating: 4.5, reviews: 112, location: 'Yogyakarta', experience: '2019', image: 'https://images.unsplash.com/photo-1520854221256-17451cc331bf?w=400&h=300&fit=crop&auto=format', tags: ['Video Saja', 'Sinematik', 'Anggaran Hemat'], description: 'Videografi sinematik dengan harga terjangkau, menciptakan film pernikahan yang tak terlupakan.', links: { instagram: 'https://instagram.com/ceritakita_video', whatsapp: 'https://wa.me/6281345678901' }, features: { 'Fotografi': false, 'Videografi': true, 'Drone': true, 'Same Day Edit': true, 'Album Fisik': false, 'Pre-wedding': false } },
-  { id: 'fv-4', name: 'Visual Story Studio', category: 'photo', price: 'Rp 12.000.000', priceNum: 12000000, rating: 4.8, reviews: 145, location: 'Bandung', experience: '2014', image: 'https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=400&h=300&fit=crop&auto=format', tags: ['Fotografi', 'Videografi', 'Drone'], description: 'Dokumentasi pernikahan lengkap dengan gaya editorial modern, drone, dan same day edit yang memukau.', links: { instagram: 'https://instagram.com/visual_story_studio', website: 'https://visualstory.id' }, features: { 'Fotografi': true, 'Videografi': true, 'Drone': true, 'Same Day Edit': true, 'Album Fisik': false, 'Pre-wedding': true } },
+  { id: 'fv-1', name: 'Lensa Cinta Studio', category: 'photo', price: 'Rp 15.000.000', priceNum: 15000000, rating: 4.9, reviews: 267, location: 'Jakarta', experience: '2013', image: 'https://images.unsplash.com/photo-1606216794074-735e91aa2c92?w=400&h=300&fit=crop&auto=format', tags: ['Sinematik', 'Drone', 'Premium Album'], description: 'Studio foto dan video pernikahan sinematik dengan standar internasional. Menggunakan kamera Sony A7 IV, Canon EOS R5, drone DJI Mavic 3, dan gimbal Ronin RS3 Pro. Tim terdiri dari 2 fotografer, 2 videografer, dan 1 drone pilot profesional. Hasil editing menggunakan teknik color grading sinematik ala film Hollywood. Tersedia same day edit (SDE) yang ditayangkan di akhir resepsi, album hardcover premium 40 halaman, dan video highlight 5–7 menit. Booking minimal 3 bulan sebelum hari-H.', links: { website: 'https://lensacinta.com', instagram: 'https://instagram.com/lensacinta_studio' }, features: { 'Fotografi': true, 'Videografi': true, 'Drone': true, 'Same Day Edit': true, 'Album Fisik': true, 'Pre-wedding': true } },
+  { id: 'fv-2', name: 'Moment Abadi Photo', category: 'photo', price: 'Rp 9.500.000', priceNum: 9500000, rating: 4.7, reviews: 189, location: 'Surabaya', experience: '2017', image: 'https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=400&h=300&fit=crop&auto=format', tags: ['Foto Saja', 'Editorial', 'Candid'], description: 'Fotografer spesialis candid editorial yang mahir menangkap momen-momen autentik, jujur, dan penuh emosi tanpa arah berlebihan. Gaya foto terinspirasi dari editorial fashion magazine dengan tonal warm-film yang khas. Menggunakan Leica M11 dan Fujifilm GFX untuk kualitas medium format yang menakjubkan. Setiap paket menghasilkan 500–800 foto pilihan yang diedit manual satu per satu. Tersedia sesi pre-wedding lokasi pilihan dan layanan cetak album hardcover premium.', links: { instagram: 'https://instagram.com/momentabadi', tiktok: 'https://tiktok.com/@momentabadi' }, features: { 'Fotografi': true, 'Videografi': false, 'Drone': false, 'Same Day Edit': false, 'Album Fisik': true, 'Pre-wedding': true } },
+  { id: 'fv-3', name: 'Cerita Kita Videography', category: 'photo', price: 'Rp 6.800.000', priceNum: 6800000, rating: 4.5, reviews: 112, location: 'Yogyakarta', experience: '2019', image: 'https://images.unsplash.com/photo-1520854221256-17451cc331bf?w=400&h=300&fit=crop&auto=format', tags: ['Video Saja', 'Sinematik', 'Anggaran Hemat'], description: 'Videografer spesialis film pernikahan sinematik dengan estetika soft dan romantis. Menggunakan Sony FX3, DJI drone, dan stabilizer gimbal 3-axis untuk footage yang mulus dan sinematik. Paket termasuk video highlight 5–7 menit, video full ceremony raw cut, dan SDE (same day edit) yang diputar di akhir resepsi. Color grading dilakukan manual dengan gaya moody cinematic. Cocok untuk pasangan muda yang menginginkan kenangan pernikahan seperti film pendek profesional dengan harga ramah anggaran.', links: { instagram: 'https://instagram.com/ceritakita_video', whatsapp: 'https://wa.me/6281345678901' }, features: { 'Fotografi': false, 'Videografi': true, 'Drone': true, 'Same Day Edit': true, 'Album Fisik': false, 'Pre-wedding': false } },
+  { id: 'fv-4', name: 'Visual Story Studio', category: 'photo', price: 'Rp 12.000.000', priceNum: 12000000, rating: 4.8, reviews: 145, location: 'Bandung', experience: '2014', image: 'https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=400&h=300&fit=crop&auto=format', tags: ['Fotografi', 'Videografi', 'Drone'], description: 'Studio dokumentasi pernikahan lengkap fotografi dan videografi dengan gaya editorial modern yang clean dan timeless. Tim profesional terdiri dari 2 fotografer dan 2 videografer spesialis wedding. Dilengkapi drone DJI Air 3 untuk aerial shot yang dramatis dan gimbal video untuk footage sinematik. Same day edit (SDE) disiapkan dalam 4–5 jam dan ditayangkan di penghujung resepsi. Color grading bertema "airy light" yang populer di Instagram. Tersedia sesi pre-wedding lokasi Bandung dan sekitarnya.', links: { instagram: 'https://instagram.com/visual_story_studio', website: 'https://visualstory.id' }, features: { 'Fotografi': true, 'Videografi': true, 'Drone': true, 'Same Day Edit': true, 'Album Fisik': false, 'Pre-wedding': true } },
   { id: 'fv-5', name: 'Foto Bahagia Abadi', category: 'photo', price: 'Rp 4.500.000', priceNum: 4500000, rating: 4.4, reviews: 167, location: 'Depok', experience: '2018', image: 'https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=400&h=300&fit=crop&auto=format', tags: ['Fotografi', 'Anggaran Hemat', 'Album Fisik'], description: 'Fotografi pernikahan berkualitas dengan paket ekonomis, termasuk album fisik eksklusif dan file digital.', links: { whatsapp: 'https://wa.me/6281200300400', instagram: 'https://instagram.com/foto_bahagia' }, features: { 'Fotografi': true, 'Videografi': false, 'Drone': false, 'Same Day Edit': false, 'Album Fisik': true, 'Pre-wedding': true } },
   // SESERAHAN
   { id: 'ses-1', name: 'Hantaran Cantik Nusantara', category: 'seserahan', price: 'Rp 4.500.000', priceNum: 4500000, rating: 4.9, reviews: 187, location: 'Jakarta Selatan', experience: '2016', image: 'https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=400&h=300&fit=crop&auto=format', tags: ['Paket Lengkap', 'Javanese Adat', 'Kustom'], description: 'Paket seserahan lengkap dengan dekorasi adat Jawa, tersedia dalam berbagai pilihan paket.', links: { instagram: 'https://instagram.com/hantaran_cantik', whatsapp: 'https://wa.me/6281555666777' }, features: { 'Paket Lengkap': true, 'Kotak Kustom': true, 'Rangkaian Buah': true, 'Kue Tradisional': true, 'Perlengkapan Ibadah': true, 'Pengiriman': true } },
@@ -243,11 +243,11 @@ const defaultVendors: Vendor[] = [
   { id: 'akc-5', name: 'Glamour Bridal Studio', category: 'accessories', price: 'Rp 1.200.000', priceNum: 1200000, rating: 4.6, reviews: 112, location: 'Jakarta Selatan', experience: '2018', image: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=400&h=300&fit=crop&auto=format', tags: ['Modern', 'Sepatu Pengantin', 'Tas Pesta'], description: 'Paket aksesoris pengantin modern meliputi sepatu, tas pesta, dan sarung tangan dengan desain kontemporer.', links: { instagram: 'https://instagram.com/glamour_bridal', tiktok: 'https://tiktok.com/@glamour_bridal', whatsapp: 'https://wa.me/6281900100200' }, features: { 'Mahkota / Tiara': false, 'Kerudung Pengantin': false, 'Set Perhiasan': false, 'Sepatu Pengantin': true, 'Sarung Tangan': true, 'Tas Pesta': true } },
 
   // Wedding Organizer
-  { id: 'wo-1', name: 'Moments Wedding Organizer', category: 'wo', price: 'Rp 25.000.000', priceNum: 25000000, rating: 4.9, reviews: 312, location: 'Jakarta Selatan', experience: '2010', image: 'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=400&h=300&fit=crop&auto=format', tags: ['Full Service', 'Koordinasi Penuh', 'Tim Profesional'], description: 'WO premium dengan tim berpengalaman lebih dari 12 tahun, menangani ratusan pernikahan mewah di seluruh Indonesia.', links: { instagram: 'https://instagram.com/moments_wo', website: 'https://momentswo.com', whatsapp: 'https://wa.me/6281200001234' }, features: { 'Konsultasi Gratis': true, 'Full Day Coverage': true, 'Koordinasi Vendor': true, 'Timeline Acara': true, 'Dekorasi Termasuk': true, 'Tim Profesional': true } },
-  { id: 'wo-2', name: 'Dreamy Day WO', category: 'wo', price: 'Rp 15.000.000', priceNum: 15000000, rating: 4.8, reviews: 198, location: 'Bandung', experience: '2015', image: 'https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=400&h=300&fit=crop&auto=format', tags: ['Modern', 'Garden Party', 'Koordinasi Vendor'], description: 'Spesialis pernikahan outdoor dan garden party dengan konsep modern romantis, tim berdedikasi siap mewujudkan impian Anda.', links: { instagram: 'https://instagram.com/dreamyday_wo', whatsapp: 'https://wa.me/6281300400567' }, features: { 'Konsultasi Gratis': true, 'Full Day Coverage': true, 'Koordinasi Vendor': true, 'Timeline Acara': true, 'Dekorasi Termasuk': false, 'Tim Profesional': true } },
-  { id: 'wo-3', name: 'Harmoni Nusantara WO', category: 'wo', price: 'Rp 8.500.000', priceNum: 8500000, rating: 4.6, reviews: 143, location: 'Yogyakarta', experience: '2017', image: 'https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=400&h=300&fit=crop&auto=format', tags: ['Adat Jawa', 'Tradisional', 'Anggaran Hemat'], description: 'WO spesialis pernikahan adat Jawa dengan pemahaman mendalam tentang tata cara dan prosesi pernikahan tradisional.', links: { whatsapp: 'https://wa.me/6281500600789', instagram: 'https://instagram.com/harmoni_wo' }, features: { 'Konsultasi Gratis': true, 'Full Day Coverage': true, 'Koordinasi Vendor': true, 'Timeline Acara': true, 'Dekorasi Termasuk': false, 'Tim Profesional': true } },
-  { id: 'wo-4', name: 'Elegan Events', category: 'wo', price: 'Rp 35.000.000', priceNum: 35000000, rating: 4.9, reviews: 87, location: 'Bali', experience: '2012', image: 'https://images.unsplash.com/photo-1550005809-91ad75fb315f?w=400&h=300&fit=crop&auto=format', tags: ['Destination Wedding', 'Luxury', 'Full Service'], description: 'WO eksklusif spesialis destination wedding di Bali, menangani tamu mancanegara dengan standar internasional.', links: { instagram: 'https://instagram.com/elegan_events', website: 'https://eleganevents.id', whatsapp: 'https://wa.me/6281700800123' }, features: { 'Konsultasi Gratis': true, 'Full Day Coverage': true, 'Koordinasi Vendor': true, 'Timeline Acara': true, 'Dekorasi Termasuk': true, 'Tim Profesional': true } },
-  { id: 'wo-5', name: 'Barokah Wedding Planner', category: 'wo', price: 'Rp 5.000.000', priceNum: 5000000, rating: 4.5, reviews: 234, location: 'Bekasi', experience: '2019', image: 'https://images.unsplash.com/photo-1606216794074-735e91aa2c92?w=400&h=300&fit=crop&auto=format', tags: ['Anggaran Hemat', 'Islami', 'Paket Lengkap'], description: 'WO terjangkau dengan nuansa Islami, membantu pasangan merencanakan pernikahan impian dalam anggaran terbatas.', links: { whatsapp: 'https://wa.me/6282100200456', instagram: 'https://instagram.com/barokah_wo', facebook: 'https://facebook.com/barokahwedding' }, features: { 'Konsultasi Gratis': true, 'Full Day Coverage': false, 'Koordinasi Vendor': true, 'Timeline Acara': true, 'Dekorasi Termasuk': false, 'Tim Profesional': true } },
+  { id: 'wo-1', name: 'Moments Wedding Organizer', category: 'wo', price: 'Rp 25.000.000', priceNum: 25000000, rating: 4.9, reviews: 312, location: 'Jakarta Selatan', experience: '2010', image: 'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=400&h=300&fit=crop&auto=format', tags: ['Full Service', 'Koordinasi Penuh', 'Tim Profesional'], description: 'Wedding Organizer premium dengan track record lebih dari 12 tahun dan 400+ pernikahan sukses di seluruh Indonesia. Tim profesional terdiri dari 8 koordinator senior, desainer dekorasi, dan vendor network yang sudah terverifikasi. Melayani pernikahan skala intimate 50 pax hingga grand wedding 2000+ pax di hotel bintang 5, resort, dan venue eksklusif. Layanan full service mencakup: konsultasi awal, pemilihan vendor, koordinasi D-Day, rundown detail, dan laporan pasca acara. Tersedia paket adat Jawa, modern, dan garden party.', links: { instagram: 'https://instagram.com/moments_wo', website: 'https://momentswo.com', whatsapp: 'https://wa.me/6281200001234' }, features: { 'Konsultasi Gratis': true, 'Full Day Coverage': true, 'Koordinasi Vendor': true, 'Timeline Acara': true, 'Dekorasi Termasuk': true, 'Tim Profesional': true } },
+  { id: 'wo-2', name: 'Dreamy Day WO', category: 'wo', price: 'Rp 15.000.000', priceNum: 15000000, rating: 4.8, reviews: 198, location: 'Bandung', experience: '2015', image: 'https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=400&h=300&fit=crop&auto=format', tags: ['Modern', 'Garden Party', 'Koordinasi Vendor'], description: 'WO spesialis pernikahan outdoor, garden party, dan intimate wedding dengan konsep modern romantis yang sedang tren. Berpengalaman mengelola venue terbuka seperti vila, kebun, rooftop, dan resort di Bandung dan sekitarnya. Tim kreatif membantu pasangan dari mood board hingga dekorasi final, termasuk koordinasi vendor: MUA, katering, fotografi, dan hiburan. Tersedia paket all-inclusive yang menghemat waktu dan energi. Konsultasi gratis tanpa batas hingga hari-H.', links: { instagram: 'https://instagram.com/dreamyday_wo', whatsapp: 'https://wa.me/6281300400567' }, features: { 'Konsultasi Gratis': true, 'Full Day Coverage': true, 'Koordinasi Vendor': true, 'Timeline Acara': true, 'Dekorasi Termasuk': false, 'Tim Profesional': true } },
+  { id: 'wo-3', name: 'Harmoni Nusantara WO', category: 'wo', price: 'Rp 8.500.000', priceNum: 8500000, rating: 4.6, reviews: 143, location: 'Yogyakarta', experience: '2017', image: 'https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=400&h=300&fit=crop&auto=format', tags: ['Adat Jawa', 'Tradisional', 'Anggaran Hemat'], description: 'WO spesialis pernikahan adat Jawa dengan pemahaman mendalam tentang setiap prosesi: siraman, midodareni, panggih, balangan suruh, hingga sungkeman. Tim memiliki latar belakang budaya Jawa yang kuat dan bekerja sama dengan juru rias dan MC adat terpercaya. Cocok untuk keluarga yang ingin melangsungkan pernikahan tradisional yang lengkap namun tetap rapi dan terorganisir. Tarif terjangkau dengan kualitas koordinasi yang tidak kalah dari WO premium. Melayani DIY, Jawa Tengah, dan Jawa Timur.', links: { whatsapp: 'https://wa.me/6281500600789', instagram: 'https://instagram.com/harmoni_wo' }, features: { 'Konsultasi Gratis': true, 'Full Day Coverage': true, 'Koordinasi Vendor': true, 'Timeline Acara': true, 'Dekorasi Termasuk': false, 'Tim Profesional': true } },
+  { id: 'wo-4', name: 'Elegan Events', category: 'wo', price: 'Rp 35.000.000', priceNum: 35000000, rating: 4.9, reviews: 87, location: 'Bali', experience: '2012', image: 'https://images.unsplash.com/photo-1550005809-91ad75fb315f?w=400&h=300&fit=crop&auto=format', tags: ['Destination Wedding', 'Luxury', 'Full Service'], description: 'WO eksklusif spesialis destination wedding di Bali dengan standar layanan internasional. Berpengalaman menangani tamu dari 20+ negara dengan koordinasi penuh: penjemputan, akomodasi, dekorasi, katering bercita rasa internasional, hingga dokumentasi. Bekerja sama dengan venue eksklusif di Ubud, Seminyak, Uluwatu, dan Nusa Penida. Memiliki lisensi legal wedding untuk pasangan asing di Bali. Setiap pernikahan ditangani oleh satu dedicated wedding coordinator dari planning hingga hari-H selesai.', links: { instagram: 'https://instagram.com/elegan_events', website: 'https://eleganevents.id', whatsapp: 'https://wa.me/6281700800123' }, features: { 'Konsultasi Gratis': true, 'Full Day Coverage': true, 'Koordinasi Vendor': true, 'Timeline Acara': true, 'Dekorasi Termasuk': true, 'Tim Profesional': true } },
+  { id: 'wo-5', name: 'Barokah Wedding Planner', category: 'wo', price: 'Rp 5.000.000', priceNum: 5000000, rating: 4.5, reviews: 234, location: 'Bekasi', experience: '2019', image: 'https://images.unsplash.com/photo-1606216794074-735e91aa2c92?w=400&h=300&fit=crop&auto=format', tags: ['Anggaran Hemat', 'Islami', 'Paket Lengkap'], description: 'Wedding Organizer terjangkau dengan nuansa Islami yang kental, membantu pasangan merencanakan pernikahan impian dalam anggaran terbatas namun bermakna. Spesialisasi akad nikah syar\'i, walimahan sederhana, dan resepsi bernuansa Islami. Menyediakan jaringan vendor halal terpercaya termasuk katering halal, MUA berhijab, dan dekorasi bernuansa Islami. Tersedia layanan konsultasi anggaran gratis untuk memaksimalkan hasil dalam budget yang ada. Aktif melayani area Bekasi, Depok, dan Bogor.', links: { whatsapp: 'https://wa.me/6282100200456', instagram: 'https://instagram.com/barokah_wo', facebook: 'https://facebook.com/barokahwedding' }, features: { 'Konsultasi Gratis': true, 'Full Day Coverage': false, 'Koordinasi Vendor': true, 'Timeline Acara': true, 'Dekorasi Termasuk': false, 'Tim Profesional': true } },
 ]
 
 function StarRating({ rating, size = 'sm' }: { rating: number; size?: 'sm' | 'xs' }) {
@@ -449,8 +449,9 @@ function AddVendorModal({ category, onClose, onAdd, editVendor, catList, fKeys }
               <input value={form.tags} onChange={e => setForm(f => ({ ...f, tags: e.target.value }))} placeholder="cth. Airbrush, Trial Included, Modern" className="w-full px-4 py-2.5 rounded-xl border border-[#e8ddd8] text-sm text-[#2c2420] focus:outline-none focus:border-[#c9736a] transition-colors bg-[#fdf8f3]" />
             </div>
             <div className="col-span-2">
-              <label className="block text-xs font-medium text-[#8c7b75] mb-1.5 uppercase tracking-wide">Deskripsi</label>
-              <textarea value={form.description} onChange={e => setForm(f => ({ ...f, description: e.target.value }))} placeholder="Deskripsi singkat tentang vendor ini..." rows={3} className="w-full px-4 py-2.5 rounded-xl border border-[#e8ddd8] text-sm text-[#2c2420] focus:outline-none focus:border-[#c9736a] transition-colors bg-[#fdf8f3] resize-none" />
+              <label className="block text-xs font-medium text-[#8c7b75] mb-1 uppercase tracking-wide">Deskripsi Lengkap</label>
+              <p className="text-[11px] text-[#b0a09b] mb-1.5">Tulis deskripsi detail: pengalaman, teknik/produk yang digunakan, keunggulan, paket yang tersedia, area layanan, dll.</p>
+              <textarea value={form.description} onChange={e => setForm(f => ({ ...f, description: e.target.value }))} placeholder="Contoh: Berpengalaman 10 tahun dalam riasan pengantin adat Jawa dan modern. Menggunakan produk MAC, NARS, dan Charlotte Tilbury yang tahan lama hingga 12 jam. Paket sudah termasuk trial makeup 2 minggu sebelum hari-H dan touch-up kit. Melayani area Jakarta, Depok, dan Bekasi..." rows={6} className="w-full px-4 py-2.5 rounded-xl border border-[#e8ddd8] text-sm text-[#2c2420] focus:outline-none focus:border-[#c9736a] transition-colors bg-[#fdf8f3] resize-y" />
             </div>
           </div>
 
@@ -479,14 +480,34 @@ function AddVendorModal({ category, onClose, onAdd, editVendor, catList, fKeys }
                     className="accent-[#c9736a] w-4 h-4 shrink-0"
                   />
                   <span className="text-xs text-[#2c2420] flex-1 truncate">{key}</span>
-                  {!keys.includes(key) && (
+                  <div className="flex gap-0.5 shrink-0">
+                    <button
+                      type="button"
+                      onClick={() => {
+                        const newName = prompt('Ubah nama fitur:', key)
+                        if (newName?.trim() && newName.trim() !== key) {
+                          setForm(f => {
+                            const feats = { ...f.features }
+                            feats[newName.trim()] = feats[key]
+                            delete feats[key]
+                            return { ...f, features: feats }
+                          })
+                        }
+                      }}
+                      className="w-5 h-5 flex items-center justify-center text-[#8c7b75] hover:text-[#c9736a] transition-colors"
+                      title="Edit nama fitur"
+                    >
+                      <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" /></svg>
+                    </button>
                     <button
                       type="button"
                       onClick={() => setForm(f => { const feats = { ...f.features }; delete feats[key]; return { ...f, features: feats } })}
-                      className="opacity-0 group-hover:opacity-100 text-red-400 hover:text-red-600 transition-opacity text-xs leading-none ml-1"
+                      className="w-5 h-5 flex items-center justify-center text-[#8c7b75] hover:text-red-500 transition-colors"
                       title="Hapus fitur"
-                    >✕</button>
-                  )}
+                    >
+                      <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+                    </button>
+                  </div>
                 </div>
               ))}
             </div>
@@ -511,15 +532,93 @@ function AddVendorModal({ category, onClose, onAdd, editVendor, catList, fKeys }
   )
 }
 
-function VendorCard({ vendor, selected, onToggle, onEdit, onDelete }: {
+function VendorDetailModal({ vendor, selected, onToggle, onClose, onEdit, fKeys }: {
+  vendor: Vendor; selected: boolean; onToggle: () => void; onClose: () => void; onEdit: () => void; fKeys: Record<string, string[]>
+}) {
+  const keys = fKeys[vendor.category] ?? []
+  const trueFeatures = keys.filter(k => vendor.features[k] === true)
+  const falseFeatures = keys.filter(k => vendor.features[k] === false)
+  return (
+    <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-4" style={{ background: 'rgba(44,36,32,0.65)', backdropFilter: 'blur(4px)' }} onClick={onClose}>
+      <div className="bg-white w-full sm:max-w-lg rounded-t-3xl sm:rounded-2xl shadow-2xl overflow-hidden max-h-[90vh] flex flex-col" onClick={e => e.stopPropagation()}>
+        {/* Image */}
+        <div className="relative h-52 shrink-0">
+          <img src={vendor.image} alt={vendor.name} className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+          <button onClick={onClose} className="absolute top-3 right-3 w-8 h-8 rounded-full bg-black/50 text-white flex items-center justify-center hover:bg-black/70 transition-colors text-sm">✕</button>
+          {vendor.custom && <span className="absolute top-3 left-3 text-[10px] font-mono px-2 py-0.5 rounded-full bg-[#c4a35a] text-white">Custom</span>}
+          <div className="absolute bottom-3 left-4 right-4">
+            <h2 className="font-display text-xl font-bold text-white leading-tight">{vendor.name}</h2>
+            <div className="flex items-center gap-2 mt-1">
+              <StarRating rating={vendor.rating} />
+              <span className="text-white/80 text-xs font-mono">{vendor.rating} ({vendor.reviews} ulasan)</span>
+            </div>
+          </div>
+        </div>
+        {/* Content */}
+        <div className="overflow-y-auto flex-1 p-5 flex flex-col gap-4">
+          {/* Meta */}
+          <div className="flex flex-wrap gap-2">
+            {vendor.location && <span className="flex items-center gap-1 text-xs text-[#8c7b75] bg-[#fdf8f3] border border-[#e8ddd8] rounded-full px-3 py-1"><svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>{vendor.location}</span>}
+            {vendor.experience && <span className="flex items-center gap-1 text-xs text-[#8c7b75] bg-[#fdf8f3] border border-[#e8ddd8] rounded-full px-3 py-1">📅 Sejak {vendor.experience}</span>}
+            <span className="flex items-center gap-1 text-sm font-semibold text-[#c9736a] bg-[#fdf8f3] border border-[#f5e6e0] rounded-full px-3 py-1">{vendor.price}</span>
+          </div>
+          {/* Tags */}
+          {vendor.tags.length > 0 && (
+            <div className="flex flex-wrap gap-1.5">
+              {vendor.tags.map(t => <span key={t} className="text-xs px-2.5 py-1 rounded-full bg-[#fdf8f3] border border-[#e8ddd8] text-[#5c4d47]">{t}</span>)}
+            </div>
+          )}
+          {/* Description */}
+          {vendor.description && (
+            <div className="bg-[#fdf8f3] border border-[#e8ddd8] rounded-xl p-4">
+              <div className="flex items-center gap-1.5 mb-2">
+                <svg className="w-4 h-4 text-[#c4a35a]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+                <span className="text-xs font-semibold text-[#c4a35a] uppercase tracking-wide">Deskripsi Lengkap</span>
+              </div>
+              <p className="text-sm text-[#2c2420] leading-relaxed">{vendor.description}</p>
+            </div>
+          )}
+          {/* Features */}
+          {keys.length > 0 && (
+            <div>
+              <div className="text-xs font-semibold text-[#8c7b75] uppercase tracking-wide mb-2">Fitur & Layanan</div>
+              <div className="grid grid-cols-2 gap-1.5">
+                {trueFeatures.map(f => <div key={f} className="flex items-center gap-1.5 text-xs text-emerald-700 bg-emerald-50 border border-emerald-100 rounded-lg px-2.5 py-1.5"><svg className="w-3 h-3 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>{f}</div>)}
+                {falseFeatures.map(f => <div key={f} className="flex items-center gap-1.5 text-xs text-[#8c7b75] bg-[#fdf8f3] border border-[#e8ddd8] rounded-lg px-2.5 py-1.5 opacity-60"><svg className="w-3 h-3 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>{f}</div>)}
+              </div>
+            </div>
+          )}
+          {/* Social */}
+          <div>
+            <div className="text-xs font-semibold text-[#8c7b75] uppercase tracking-wide mb-2">Kontak & Media Sosial</div>
+            <SocialLinks links={vendor.links} />
+          </div>
+        </div>
+        {/* Footer actions */}
+        <div className="p-4 border-t border-[#f5e6e0] flex gap-2 shrink-0">
+          <button onClick={onEdit} className="flex items-center gap-1.5 px-4 py-2.5 rounded-xl border border-[#e8ddd8] text-sm text-[#8c7b75] hover:bg-[#fdf8f3] transition-colors">
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" /></svg>
+            Edit
+          </button>
+          <button onClick={() => { onToggle(); onClose() }} className={`flex-1 py-2.5 rounded-xl text-sm font-semibold transition-all ${selected ? 'bg-[#fdf8f3] border border-[#c9736a] text-[#c9736a]' : 'text-white'}`} style={selected ? {} : { background: 'linear-gradient(135deg,#c9736a,#a85a52)' }}>
+            {selected ? '✓ Sudah Dipilih — Batalkan' : '+ Tambahkan ke Perbandingan'}
+          </button>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+function VendorCard({ vendor, selected, onToggle, onEdit, onDelete, onDetail }: {
   vendor: Vendor; selected: boolean; onToggle: () => void
-  onEdit: () => void; onDelete: () => void
+  onEdit: () => void; onDelete: () => void; onDetail: () => void
 }) {
   return (
     <div
-      className={`relative rounded-2xl overflow-hidden transition-all duration-300 group cursor-pointer ${selected ? 'ring-2 ring-[#c9736a] ring-offset-2 shadow-xl shadow-[#c9736a]/20' : 'ring-1 ring-[#e8ddd8] hover:ring-[#c4a35a]/60 hover:shadow-lg hover:shadow-[#c4a35a]/10'}`}
-      style={{ background: '#ffffff' }}
       onClick={onToggle}
+      className={`relative rounded-2xl overflow-hidden transition-all duration-300 cursor-pointer group ${selected ? 'ring-2 ring-[#c9736a] ring-offset-2 shadow-xl shadow-[#c9736a]/20' : 'ring-1 ring-[#e8ddd8] hover:ring-[#c4a35a]/60 hover:shadow-lg hover:shadow-[#c4a35a]/10'}`}
+      style={{ background: '#ffffff' }}
     >
       {/* Selected overlay checkmark */}
       {selected && (
@@ -528,32 +627,31 @@ function VendorCard({ vendor, selected, onToggle, onEdit, onDelete }: {
         </div>
       )}
 
-      {/* Edit / Delete — visible on hover for all cards */}
-      <div className={`absolute top-3 left-3 z-20 flex gap-1.5 transition-opacity duration-200 ${selected ? 'opacity-0' : 'opacity-0 group-hover:opacity-100'}`}>
-        <button
-          onClick={e => { e.stopPropagation(); onEdit() }}
-          className="w-7 h-7 rounded-full bg-white/95 border border-[#e8ddd8] flex items-center justify-center text-[#8c7b75] hover:text-[#c9736a] hover:border-[#c9736a] transition-colors shadow-sm"
-          title="Edit vendor"
-        >
-          <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" /></svg>
-        </button>
-        <button
-          onClick={e => { e.stopPropagation(); onDelete() }}
-          className="w-7 h-7 rounded-full bg-white/95 border border-[#e8ddd8] flex items-center justify-center text-[#8c7b75] hover:text-red-500 hover:border-red-300 transition-colors shadow-sm"
-          title="Hapus vendor"
-        >
-          <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" /></svg>
-        </button>
-      </div>
-
       <div className="relative h-44 overflow-hidden bg-[#f5e6e0]">
         <img src={vendor.image} alt={vendor.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
         <div className={`absolute inset-0 transition-all duration-300 ${selected ? 'bg-gradient-to-t from-black/50 via-[#c9736a]/10 to-transparent' : 'bg-gradient-to-t from-black/40 to-transparent'}`} />
         {vendor.custom && (
-          <div className="absolute bottom-3 right-3">
+          <div className="absolute bottom-3 left-3">
             <span className="font-mono text-[10px] font-medium px-2 py-0.5 rounded-full bg-[#c4a35a]/90 text-white">Custom</span>
           </div>
         )}
+        {/* Edit / Delete — always visible, bottom-right of photo */}
+        <div className="absolute bottom-2 right-2 z-20 flex gap-1.5" onClick={e => e.stopPropagation()}>
+          <button
+            onClick={onEdit}
+            className="w-7 h-7 rounded-full bg-white/95 border border-[#e8ddd8] flex items-center justify-center text-[#8c7b75] hover:text-[#c9736a] hover:border-[#c9736a] transition-colors shadow-sm"
+            title="Edit vendor"
+          >
+            <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" /></svg>
+          </button>
+          <button
+            onClick={onDelete}
+            className="w-7 h-7 rounded-full bg-white/95 border border-[#e8ddd8] flex items-center justify-center text-[#8c7b75] hover:text-red-500 hover:border-red-300 transition-colors shadow-sm"
+            title="Hapus vendor"
+          >
+            <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" /></svg>
+          </button>
+        </div>
       </div>
       <div className="p-4">
         <h3 className="font-display font-semibold text-base text-[#2c2420] leading-tight mb-1.5">{vendor.name}</h3>
@@ -565,27 +663,27 @@ function VendorCard({ vendor, selected, onToggle, onEdit, onDelete }: {
           <svg className="w-3 h-3 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
           {vendor.location}
         </p>
-        {vendor.tags.length > 0 && (
-          <div className="flex flex-wrap gap-1 mb-2">
-            {vendor.tags.slice(0, 3).map(t => (
-              <span key={t} className="text-[10px] font-medium px-2 py-0.5 rounded-full bg-[#fdf8f3] border border-[#e8ddd8] text-[#8c7b75]">{t}</span>
-            ))}
-          </div>
-        )}
-        {vendor.description && (
-          <p className="text-[11px] text-[#8c7b75] leading-relaxed mb-3 line-clamp-2">{vendor.description}</p>
-        )}
+        <div className="flex items-center gap-1 mb-2">
+          {vendor.tags.length > 0 && (
+            <div className="flex flex-wrap gap-1 flex-1 min-w-0">
+              {vendor.tags.slice(0, 3).map(t => (
+                <span key={t} className="text-[10px] font-medium px-2 py-0.5 rounded-full bg-[#fdf8f3] border border-[#e8ddd8] text-[#8c7b75]">{t}</span>
+              ))}
+            </div>
+          )}
+          {vendor.description && (
+            <button
+              onClick={e => { e.stopPropagation(); onDetail() }}
+              title="Lihat deskripsi"
+              className="shrink-0 w-6 h-6 rounded-full bg-[#fdf8f3] border border-[#e8ddd8] flex items-center justify-center text-[#c4a35a] hover:bg-[#f5e6e0] hover:border-[#c4a35a] transition-colors ml-auto"
+            >
+              <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+            </button>
+          )}
+        </div>
         <div className="pt-3 border-t border-[#f5e6e0]">
           <SocialLinks links={vendor.links} />
-          <div className="flex items-center justify-between gap-2">
-            <span className="font-display font-semibold text-[#c9736a] text-sm truncate">{vendor.price}</span>
-            <button
-              onClick={onToggle}
-              className={`shrink-0 text-xs font-medium px-2.5 py-1 rounded-full transition-colors ${selected ? 'bg-[#c9736a] text-white' : 'bg-[#fdf8f3] border border-[#e8ddd8] text-[#8c7b75] hover:bg-[#f5e6e0]'}`}
-            >
-              {selected ? '✓ Dipilih' : '+ Bandingkan'}
-            </button>
-          </div>
+          <span className="font-display font-semibold text-[#c9736a] text-sm">{vendor.price}</span>
         </div>
       </div>
     </div>
@@ -719,6 +817,9 @@ function SummarySection({ vendors, category, budgetNum = 0, fKeys }: { vendors: 
 
               {/* Analysis */}
               <div className="px-4 py-3 bg-white">
+                {v.description && (
+                  <p className="text-xs text-[#8c7b75] leading-relaxed mb-2 italic border-l-2 border-[#e8ddd8] pl-2">{v.description}</p>
+                )}
                 <p className="text-xs text-[#5a4a44] leading-relaxed mb-3">{s.reason}</p>
 
                 {/* Pros */}
@@ -904,6 +1005,7 @@ export default function App() {
   const [categoryFeatureKeys, setCategoryFeatureKeys] = useState<Record<string, string[]>>(featureKeys as Record<string, string[]>)
   const [showCatModal, setShowCatModal] = useState(false)
   const [editingCat, setEditingCat] = useState<CategoryMeta | null>(null)
+  const [detailVendor, setDetailVendor] = useState<Vendor | null>(null)
   const tabsRef = useRef<HTMLDivElement>(null)
 
   const categoryVendors = allVendors.filter(v => v.category === activeCategory)
@@ -1088,6 +1190,7 @@ export default function App() {
               onToggle={() => toggleVendor(vendor.id)}
               onEdit={() => { setEditingVendor(vendor); setShowAddModal(true) }}
               onDelete={() => handleDeleteVendor(vendor.id)}
+              onDetail={() => setDetailVendor(vendor)}
             />
           ))}
         </div>
@@ -1095,7 +1198,68 @@ export default function App() {
         {/* Comparison + Summary — muncul di bawah grid */}
         {selectedVendors.length >= 2 && (
           <div className="mt-8">
+            {/* Description comparison panel */}
+            {selectedVendors.some(v => v.description) && (
+              <div className="mb-5 rounded-2xl border border-[#e8ddd8] overflow-hidden bg-white shadow-sm">
+                <div className="px-6 py-4 border-b border-[#f5e6e0] flex items-center gap-2" style={{ background: '#fdf8f3' }}>
+                  <svg className="w-4 h-4 text-[#c4a35a]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+                  <span className="font-display font-semibold text-[#2c2420] text-lg">Deskripsi Vendor</span>
+                </div>
+                <div className="grid gap-0 divide-x divide-[#f5e6e0]" style={{ gridTemplateColumns: `repeat(${selectedVendors.length}, 1fr)` }}>
+                  {selectedVendors.map(v => (
+                    <div key={v.id} className="p-5">
+                      {/* Vendor identity */}
+                      <div className="flex items-center gap-2.5 mb-3">
+                        <img src={v.image} alt={v.name} className="w-10 h-10 rounded-full object-cover border-2 border-[#e8ddd8] shrink-0" />
+                        <div className="min-w-0">
+                          <div className="font-display font-semibold text-sm text-[#2c2420] leading-tight truncate">{v.name}</div>
+                          <div className="flex items-center gap-0.5 mt-0.5">
+                            {[1,2,3,4,5].map(i => (
+                              <svg key={i} className={`w-2.5 h-2.5 ${i <= Math.round(v.rating) ? 'text-[#c4a35a]' : 'text-[#e8ddd8]'}`} fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                            ))}
+                            <span className="text-[10px] font-mono text-[#8c7b75] ml-0.5">{v.rating} ({v.reviews})</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Key facts */}
+                      <div className="flex flex-wrap gap-1.5 mb-3">
+                        <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-[#c9736a] bg-[#fdf0ed] border border-[#f5d5cc] rounded-full px-2.5 py-0.5">
+                          {v.price}
+                        </span>
+                        {v.location && v.location !== '-' && (
+                          <span className="inline-flex items-center gap-1 text-[11px] text-[#5a4a44] bg-[#fdf8f3] border border-[#e8ddd8] rounded-full px-2.5 py-0.5">
+                            <svg className="w-2.5 h-2.5 text-[#8c7b75]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                            {v.location}
+                          </span>
+                        )}
+                        {v.experience && (
+                          <span className="inline-flex items-center gap-1 text-[11px] text-[#5a4a44] bg-[#fdf8f3] border border-[#e8ddd8] rounded-full px-2.5 py-0.5">
+                            <svg className="w-2.5 h-2.5 text-[#8c7b75]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                            Sejak {v.experience}
+                          </span>
+                        )}
+                      </div>
+
+                      {/* Description box */}
+                      <div className="rounded-xl border border-[#f0e8e4] bg-[#fdf8f3] p-3">
+                        <div className="flex items-center gap-1.5 mb-2">
+                          <svg className="w-3.5 h-3.5 text-[#c4a35a] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+                          <span className="text-[10px] font-bold text-[#c4a35a] uppercase tracking-wider">Deskripsi Lengkap</span>
+                        </div>
+                        {v.description
+                          ? <p className="text-xs text-[#5a4a44] leading-relaxed">{v.description}</p>
+                          : <p className="text-xs text-[#c4b4ae] italic">Tidak ada deskripsi.</p>
+                        }
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
             <SummarySection vendors={selectedVendors} category={activeCategory} budgetNum={budgetNum} fKeys={categoryFeatureKeys} />
+
             <div className="rounded-2xl border border-[#e8ddd8] overflow-hidden bg-white shadow-sm">
               <div className="px-6 py-4 border-b border-[#f5e6e0] flex items-center justify-between" style={{ background: '#fdf8f3' }}>
                 <div className="flex items-center gap-2">
@@ -1173,6 +1337,18 @@ export default function App() {
           </div>
         </div>
       </footer>
+
+      {/* Vendor Detail Modal */}
+      {detailVendor && (
+        <VendorDetailModal
+          vendor={detailVendor}
+          selected={selectedIds.includes(detailVendor.id)}
+          onToggle={() => toggleVendor(detailVendor.id)}
+          onClose={() => setDetailVendor(null)}
+          onEdit={() => { setEditingVendor(detailVendor); setShowAddModal(true); setDetailVendor(null) }}
+          fKeys={categoryFeatureKeys}
+        />
+      )}
 
       {/* Add / Edit Vendor Modal */}
       {showAddModal && (
